@@ -7,8 +7,9 @@ attr_accessor :name, :word
   end
 
   def match(array)
+    
     array.collect do |word|
-      word.sort == @word.sort
+      word.split.sort == @word.split.sort
     end
   end
 
