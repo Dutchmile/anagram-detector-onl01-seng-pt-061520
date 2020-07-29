@@ -8,9 +8,8 @@ attr_accessor :name, :word
   end
 
   def match(array)
-
+    matches = []
     array.each do |word|
-      matches = []
       matches.push(word) if word.split("").sort.join == @word.split("").sort.join
     end
     matches
