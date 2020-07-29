@@ -9,9 +9,11 @@ attr_accessor :name, :word
 
   def match(array)
 
-    array.detect do |word|
-      word.split("").sort.join == @word.split("").sort.join
+    array.each do |word|
+      matches = []
+      matches.push(word) if word.split("").sort.join == @word.split("").sort.join
     end
+    matches
   end
 
 end
