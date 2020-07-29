@@ -6,9 +6,9 @@ attr_accessor :name, :word
     @word = word
   end
 
-  def match(word, array)
-    array.collect do |test_word|
-      test_word.sort == word.sort
+  def match(array)
+    array.collect do |word|
+      word.sort == @word.sort
     end
   end
 
