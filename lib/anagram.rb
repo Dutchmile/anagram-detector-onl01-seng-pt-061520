@@ -10,7 +10,7 @@ attr_accessor :name, :word
   def match(array)
 
     array.collect do |word|
-      word.split(",").sort.join == @word.split.sort.join
+      word.split("").sort.join == @word.split("").sort.join
       binding.pry
     end
   end
